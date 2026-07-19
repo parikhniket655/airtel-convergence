@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Altura Integrated Home - Smart Connectivity & Security Ecosystem</title>
+  <meta name="description" content="Enlist in Altura's unified household packages. Combine Postpaid, Fiber WiFi, Altura Xstream Box & Play, Altura Xsafe security, Altura Payments Bank, and Google One storage into one simple bill.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header Navigation (Primary Tab Bar) -->
+  <header>
+    <div class="container navbar">
+      <a href="javascript:void(0)" onclick="switchTab('overview')" class="logo" aria-label="Altura Home Page" style="padding: 4px 0;">
+        <!-- Official Altura Brand Swoosh Icon (Only the icon, no text) -->
+        <svg class="logo-svg" fill="#ED1D24" viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+          <title>Altura Logo</title>
+          <path d="M7.137 23.862c.79 0 1.708-.19 2.751-.554 1.55-.538 2.784-1.281 3.986-2.009l.316-.205a29.733 29.733 0 0 0 3.764-2.72 16.574 16.574 0 0 0 5.457-7.529c.395-1.138.949-3.384.268-5.487a7.117 7.117 0 0 0-2.862-3.749c-.158-.126-1.898-1.47-5.203-1.47-3.005 0-6.31 1.107-9.806 3.32l-.11.08-.317.205a20.133 20.133 0 0 0-2.309 1.693C1.585 6.813-.091 9.106.004 11.067c.031.79.427 1.534 1.075 2.008a3.472 3.472 0 0 0 2.214.68c1.803 0 3.765-.948 5.109-1.74l.253-.157.696-.443.237-.158c1.898-1.234 3.875-2.515 6.105-3.258a5.255 5.255 0 0 1 1.55-.285 3.163 3.163 0 0 1 .664.08 2.112 2.112 0 0 1 1.47 1.106c.523 1.012.396 2.61-.316 4.08a17.871 17.871 0 0 1-4.887 5.836 19.488 19.488 0 0 1-3.194 2.215l-.095.031a9.634 9.634 0 0 1-1.471.696l-.08.032-.41.158c-2.23.57-.87-1.329-.87-1.329.474-.537.98-1.028 1.518-1.502.316-.269.633-.554.933-.854l.064-.063c.395-.38.933-.902.901-1.645-.047-.98-1.075-1.582-2.056-1.613h-.063c-.95 0-1.819.522-2.404.98a7.27 7.27 0 0 0-1.598 1.74c-.6.901-1.85 3.226-.632 5.077.49.743 1.313 1.123 2.42 1.123z"/>
+        </svg>
+      </a>
+      <ul class="nav-links">
+        <li id="nav-item-overview" class="active"><a href="javascript:void(0)" onclick="switchTab('overview')">Overview</a></li>
+        <li id="nav-item-services"><a href="javascript:void(0)" onclick="switchTab('services')">Services</a></li>
+        <li id="nav-item-packages"><a href="javascript:void(0)" onclick="switchTab('packages')">Plans & Packages</a></li>
+        <li id="nav-item-customizer"><a href="javascript:void(0)" onclick="switchTab('customizer')">Build Bundle</a></li>
+        <li id="nav-item-faq"><a href="javascript:void(0)" onclick="switchTab('faq')">FAQs</a></li>
+      </ul>
+      <button class="nav-btn" onclick="toggleChatbot(true)">
+        <i class="fa-solid fa-comments"></i> Ask AirBot
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Areas wrapped in Tab Contents -->
+  
+  <!-- Tab 1: Overview -->
+  <main id="tab-overview" class="tab-content active">
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>The Unified Digital Core for Your <span>Household</span></h1>
+          <p class="hero-description">
+            Consolidate your mobile connectivity, high-speed fiber, digital television, <strong>Altura Xsafe security</strong>, banking, and <strong>Google One storage</strong> into a single premium relationship. Save up to ₹6,000 annually, earn <strong>Thanks Coins</strong>, and automate with Autopay for extra billing discounts.
+          </p>
+          <div class="hero-actions">
+            <button class="nav-btn" onclick="switchTab('packages')">Explore Packages</button>
+            <button class="btn-secondary" onclick="switchTab('customizer')">Build Your Bundle</button>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3>-50%</h3>
+              <p>Churn Reduction</p>
+            </div>
+            <div class="stat-item">
+              <h3>1</h3>
+              <p>Unified Monthly Bill</p>
+            </div>
+            <div class="stat-item">
+              <h3>Altura Xsafe</h3>
+              <p>Smart Protection</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Interactive Visual status card -->
+        <div class="hero-visual">
+          <div class="visual-bg"></div>
+          <div class="visual-card premium-card">
+            <div class="visual-title">
+              <span>Household Status</span>
+              <div class="pulse-indicator"></div>
+            </div>
+            <div class="visual-item">
+              <span>Altura Fiber Broadband</span>
+              <span><i class="fa-solid fa-wifi"></i> 100 Mbps (Active)</span>
+            </div>
+            <div class="visual-item">
+              <span>Family Postpaid SIMs</span>
+              <span><i class="fa-solid fa-sim-card"></i> 2/2 Connected</span>
+            </div>
+            <div class="visual-item">
+              <span>Altura Xsafe Camera</span>
+              <span><i class="fa-solid fa-video"></i> Active & Secure</span>
+            </div>
+            <div class="visual-item">
+              <span>Thanks Coins Balance</span>
+              <span><i class="fa-solid fa-coins" style="color: var(--accent-gold);"></i> 2,450 Coins Earned</span>
+            </div>
+            <div class="visual-item" style="margin-top: 10px; padding-top: 12px; border-top: 1px dashed var(--border-color);">
+              <span>Autopay Status</span>
+              <span style="color: var(--success-green); font-weight: 700;">-₹50 Autopay Discount</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Tab 2: Packages -->
+  <div id="tab-packages" class="tab-content">
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Select Your Household Package</h2>
+          <p class="section-subtitle">A tier for every family size. Enjoy transparent, single-bill convenience, Google One storage, and extra savings.</p>
+          
+          <!-- Pricing Toggle -->
+          <div class="pricing-toggle-container">
+            <span class="toggle-label active" id="label-monthly">Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="billing-toggle" onchange="toggleBillingCycle()">
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label" id="label-annual">Annual (Save 20%)</span>
+            <span class="discount-tag">20% Off Yearly</span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: Starter -->
+          <div class="price-card premium-card" id="card-starter">
+            <div class="price-header">
+              <h3>Altura Starter</h3>
+              <p class="price-tagline">Perfect for individual professionals and student setups.</p>
+              <div class="price-box">
+                <div class="price-value">
+                  <span class="currency">₹</span><span class="price-num" data-monthly="499" data-annual="399">499</span><span class="period">/mo</span>
+                </div>
+              </div>
+            </div>
+            <ul class="price-features">
+              <li><i class="fa-solid fa-circle-check"></i> 1 Postpaid Mobile SIM</li>
+              <li><i class="fa-solid fa-circle-check"></i> 40GB Pooled Data</li>
+              <li><i class="fa-solid fa-cloud" style="color:var(--accent-cyan)"></i> Google One 100GB Storage</li>
+              <li><i class="fa-solid fa-coins" style="color:var(--accent-gold)"></i> Earn 100 Thanks Coins/mo</li>
+              <li><i class="fa-solid fa-circle-check"></i> Xstream Play (20+ OTT apps)</li>
+              <li class="text-muted"><i class="fa-solid fa-circle-xmark"></i> No Fiber Broadband</li>
+            </ul>
+            <button class="price-btn" onclick="selectPlan('Starter')">Get Started</button>
+          </div>
+
+          <!-- Tier 2: Core -->
+          <div class="price-card premium-card" id="card-connect">
+            <div class="price-header">
+              <h3>Altura Connect</h3>
+              <p class="price-tagline">Ideal for couples and home offices with standard Wi-Fi requirements.</p>
+              <div class="price-box">
+                <div class="price-value">
+                  <span class="currency">₹</span><span class="price-num" data-monthly="999" data-annual="799">999</span><span class="period">/mo</span>
+                </div>
+              </div>
+            </div>
+            <ul class="price-features">
+              <li><i class="fa-solid fa-circle-check"></i> Fiber Broadband (40 Mbps)</li>
+              <li><i class="fa-solid fa-circle-check"></i> 1 Postpaid Mobile SIM (50GB)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Altura Xstream Box (4K Android)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Xstream Play OTT (20+ Apps)</li>
+              <li><i class="fa-solid fa-cloud" style="color:var(--accent-cyan)"></i> Google One 100GB Storage</li>
+              <li><i class="fa-solid fa-coins" style="color:var(--accent-gold)"></i> Earn 200 Thanks Coins/mo</li>
+              <li class="text-muted"><i class="fa-solid fa-circle-xmark"></i> No Altura Xsafe Security</li>
+            </ul>
+            <button class="price-btn" onclick="selectPlan('Connect')">Get Connected</button>
+          </div>
+
+          <!-- Tier 3: Family Secure (Discounted) -->
+          <div class="price-card premium-card featured" id="card-family">
+            <div class="price-header">
+              <h3>Family Secure</h3>
+              <p class="price-tagline">Complete connectivity & security for typical urban households.</p>
+              <div class="price-box">
+                <div class="original-price" id="family-orig-price">₹1,499/mo</div>
+                <div class="price-value">
+                  <span class="currency">₹</span><span class="price-num" data-monthly="999" data-annual="1199" id="family-price-val">999</span><span class="period" id="family-period-label">/mo for 3 mos</span>
+                </div>
+              </div>
+            </div>
+            <ul class="price-features">
+              <li><i class="fa-solid fa-circle-check"></i> Fiber Broadband (100 Mbps)</li>
+              <li><i class="fa-solid fa-circle-check"></i> 2 Postpaid Mobile SIMs (150GB pool)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Altura Xstream Box & Play Bundle</li>
+              <li><i class="fa-solid fa-cloud" style="color:var(--accent-cyan)"></i> Google One 200GB Storage</li>
+              <li><i class="fa-solid fa-coins" style="color:var(--accent-gold)"></i> Earn 500 Thanks Coins/mo</li>
+              <li class="extra-feature"><i class="fa-solid fa-shield-heart"></i> <strong>Altura Xsafe (1 AI Camera)</strong></li>
+              <li class="extra-feature"><i class="fa-solid fa-piggy-bank"></i> Payments Bank Savings (7% interest)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Autopay Enabled: Save ₹50/mo</li>
+            </ul>
+            <button class="price-btn" onclick="selectPlan('Family Secure')">Claim Discount</button>
+          </div>
+
+          <!-- Tier 4: Infinite -->
+          <div class="price-card premium-card" id="card-infinite">
+            <div class="price-header">
+              <h3>Altura Infinite</h3>
+              <p class="price-tagline">Ultimate speed, unlimited access, and complete surveillance shield.</p>
+              <div class="price-box">
+                <div class="price-value">
+                  <span class="currency">₹</span><span class="price-num" data-monthly="2999" data-annual="2399">2,999</span><span class="period">/mo</span>
+                </div>
+              </div>
+            </div>
+            <ul class="price-features">
+              <li><i class="fa-solid fa-circle-check"></i> Giga-speed Fiber (1 Gbps)</li>
+              <li><i class="fa-solid fa-circle-check"></i> 4 Postpaid Mobile SIMs (Unlimited 5G)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Altura Xstream Box & Play Bundle</li>
+              <li><i class="fa-solid fa-cloud" style="color:var(--accent-cyan)"></i> Google One 2TB Storage</li>
+              <li><i class="fa-solid fa-coins" style="color:var(--accent-gold)"></i> Earn 1,000 Thanks Coins/mo</li>
+              <li class="extra-feature"><i class="fa-solid fa-shield-heart"></i> <strong>Altura Xsafe (3 AI Cameras)</strong></li>
+              <li class="extra-feature"><i class="fa-solid fa-bolt"></i> Netflix & Amazon Prime Benefits</li>
+              <li><i class="fa-solid fa-circle-check"></i> Autopay Enabled: Save ₹50/mo</li>
+            </ul>
+            <button class="price-btn" onclick="selectPlan('Infinite')">Go Infinite</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tab 3: Customizer -->
+  <div id="tab-customizer" class="tab-content">
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Build Your Custom Bundle</h2>
+          <p class="section-subtitle">Select individual components, toggle Autopay, and see your dynamically calculated Thanks Coins.</p>
+        </div>
+
+        <div class="customizer-box premium-card">
+          <div class="customizer-options">
+            <h3>Choose Your Components</h3>
+            
+            <!-- Fiber WiFi Toggle -->
+            <div class="service-toggle-row" id="row-broadband">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-wifi"></i></div>
+                <div>
+                  <h4>Altura Fiber Broadband</h4>
+                  <p>100 Mbps high-speed WiFi (Individual: ₹599/mo)</p>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-broadband" onchange="updateCustomizer()" checked>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!-- Postpaid SIMs Count -->
+            <div class="service-toggle-row" id="row-mobile">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <div>
+                  <h4>Altura Postpaid SIMs (Family)</h4>
+                  <p>Pooled data & unlimited calls (Individual: ₹350/mo per SIM)</p>
+                  <div style="margin-top: 8px; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 0.85rem; color: var(--text-secondary);">SIM Count:</span>
+                    <button onclick="adjustSimCount(-1)" style="width:24px; height:24px; border-radius:50%; background:var(--bg-surface-elevated); border:1px solid var(--border-color); color:#fff; cursor:pointer;">-</button>
+                    <span id="sim-count-display" style="font-weight:700; color:var(--altura-red);">2</span>
+                    <button onclick="adjustSimCount(1)" style="width:24px; height:24px; border-radius:50%; background:var(--bg-surface-elevated); border:1px solid var(--border-color); color:#fff; cursor:pointer;">+</button>
+                  </div>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-mobile" onchange="updateCustomizer()" checked>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!-- DTH TV Toggle -->
+            <div class="service-toggle-row" id="row-dth">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-tv"></i></div>
+                <div>
+                  <h4>Altura Xstream Box & Play</h4>
+                  <p>4K Android Box & Xstream Play OTT bundle (Individual: ₹250/mo)</p>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-dth" onchange="updateCustomizer()" checked>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!-- Google One Toggle -->
+            <div class="service-toggle-row" id="row-googleone">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-cloud"></i></div>
+                <div>
+                  <h4>Google One Cloud Storage (2TB)</h4>
+                  <p>Expand storage space across Google services (Individual: ₹209/mo)</p>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-googleone" onchange="updateCustomizer()" checked>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!-- Altura Xsafe Toggle -->
+            <div class="service-toggle-row" id="row-security">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <h4>Altura Xsafe AI Camera</h4>
+                  <p>Smart camera security with human motion alert & Cloud backup (Individual: ₹150/mo per camera)</p>
+                  <div style="margin-top: 8px; display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 0.85rem; color: var(--text-secondary);">Cameras:</span>
+                    <button onclick="adjustCameraCount(-1)" style="width:24px; height:24px; border-radius:50%; background:var(--bg-surface-elevated); border:1px solid var(--border-color); color:#fff; cursor:pointer;">-</button>
+                    <span id="camera-count-display" style="font-weight:700; color:var(--altura-red);">1</span>
+                    <button onclick="adjustCameraCount(1)" style="width:24px; height:24px; border-radius:50%; background:var(--bg-surface-elevated); border:1px solid var(--border-color); color:#fff; cursor:pointer;">+</button>
+                  </div>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-security" onchange="updateCustomizer()" checked>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!-- Payments Bank Toggle -->
+            <div class="service-toggle-row" id="row-bank">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-building-columns"></i></div>
+                <div>
+                  <h4>Payments Bank Account</h4>
+                  <p>Prime tier interest (7% PA) and utility cashback perks (Individual: ₹99/mo)</p>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-bank" onchange="updateCustomizer()" checked>
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <!-- Autopay Switch -->
+            <div class="service-toggle-row" id="row-autopay" style="border: 1.5px dashed var(--accent-gold);">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-credit-card" style="color:var(--accent-gold);"></i></div>
+                <div>
+                  <h4>Enable Autopay Bill Automation</h4>
+                  <p>Save flat <strong>₹50/mo</strong> & earn <strong>1,000 bonus Thanks Coins</strong> instantly!</p>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-autopay" onchange="updateCustomizer()" checked>
+                <span class="checkmark" style="border-color: var(--accent-gold);"></span>
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Calculated Summary -->
+          <div class="customizer-summary">
+            <div>
+              <div class="summary-header">
+                <h3>Pricing Summary</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem;">Interactive Comparison</p>
+              </div>
+              <div class="summary-items" id="customizer-items-list">
+                <!-- JS Injected items -->
+              </div>
+              <div style="margin-top: 16px; padding: 12px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fa-solid fa-coins" style="color:var(--accent-gold); margin-right:6px;"></i> Thanks Coins Earned:</span>
+                <strong id="custom-coins-val" style="color:var(--accent-gold);">1,250</strong>
+              </div>
+            </div>
+
+            <div>
+              <div class="summary-total">
+                <span>A-la-Carte Total:</span>
+                <span id="custom-total-val">₹0/mo</span>
+              </div>
+              <div class="bundle-saving-tip" id="bundle-recommendation-box">
+                We recommend the <strong>Family Secure</strong> Bundle for ₹1,499/mo. You save <strong>₹150/mo</strong>!
+              </div>
+              <button class="customizer-btn" onclick="checkoutCustom()">Book Bundle Configuration</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tab 4: Services -->
+  <div id="tab-services" class="tab-content">
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Altura's Current Services</h2>
+          <p class="section-subtitle">Everything your home needs to stay connected, secure, and financially empowered, combined under one brand.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Mobility -->
+          <div class="service-card premium-card" onclick="highlightServiceInCustomizer('mobile')">
+            <div class="service-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Altura Postpaid</h3>
+            <p>Unlimited calls, massive pooled data with rollover, and priority network slots for all family members.</p>
+            <span class="service-badge">Connectivity</span>
+          </div>
+          <!-- Fiber -->
+          <div class="service-card premium-card" onclick="highlightServiceInCustomizer('broadband')">
+            <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
+            <h3>Altura Fiber</h3>
+            <p>Symmetric download speeds up to 1 Gbps, dual-band Wi-Fi router included with automatic failover.</p>
+            <span class="service-badge">Connectivity</span>
+          </div>
+          <!-- DTH -->
+          <div class="service-card premium-card" onclick="highlightServiceInCustomizer('dth')">
+            <div class="service-icon"><i class="fa-solid fa-tv"></i></div>
+            <h3>Altura Xstream TV</h3>
+            <p>4K Android TV box combined with Xstream Play OTT subscription enlisting 20+ OTT apps.</p>
+            <span class="service-badge">Entertainment</span>
+          </div>
+          <!-- Xsafe -->
+          <div class="service-card premium-card" onclick="highlightServiceInCustomizer('security')">
+            <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h3>Altura Xsafe</h3>
+            <p>AI smart indoor/outdoor cameras with human detection, HD live-feed app access, and cloud recording backup.</p>
+            <span class="service-badge">Home Security</span>
+          </div>
+          <!-- Payments Bank -->
+          <div class="service-card premium-card" onclick="highlightServiceInCustomizer('bank')">
+            <div class="service-icon"><i class="fa-solid fa-wallet"></i></div>
+            <h3>Payments Bank</h3>
+            <p>Earn 7% interest on savings, enjoy Safe Pay anti-fraud protection, and utility cashbacks.</p>
+            <span class="service-badge">Financial</span>
+          </div>
+          <!-- Google One -->
+          <div class="service-card premium-card" onclick="highlightServiceInCustomizer('googleone')">
+            <div class="service-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Google One Benefit</h3>
+            <p>Expand your digital storage (up to 2TB) to backup family photos and files across devices.</p>
+            <span class="service-badge">Cloud Storage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Tab 5: FAQ -->
+  <div id="tab-faq" class="tab-content">
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">Addressing Household Concerns</h2>
+          <p class="section-subtitle">Consolidating is a big step. Here's how we address standard consumer barriers to help you switch smoothly.</p>
+        </div>
+
+        <div class="faq-grid">
+          <!-- Q1: Cost Barrier -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Will consolidating services really save me money?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, absolutely. By combining services, we avoid redundant platform overheads. For example, buying Broadband (₹599), two Postpaid SIMs (₹700), Altura Xstream Box (₹250), Google One 2TB storage (₹209), Xsafe Camera (₹150), and Payments Bank (₹99) individually costs <strong>₹2,006/month</strong>. 
+                With our **Family Secure** package, you get all these for <strong>₹1,499/month</strong>. Even better, you pay just <strong>₹999/month</strong> for the first 3 months! Enable **Autopay** to reduce this further by <strong>₹50/month</strong>, bringing it to ₹949/mo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2: Google One and Thanks Coins -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>What are Thanks Coins and Google One benefits?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                **Altura Thanks Coins** is our loyalty reward program. You earn coins monthly based on your plan level, and bonus coins for activating autopay. Coins can be redeemed directly in the Altura app for OTT upgrades, shopping coupons, and bank cashbacks. 
+                <br><br>
+                **Google One Cloud Storage Benefits** are included in all of our packages (100GB in Starter/Connect, 200GB in Family Secure, and 2TB in Infinite). You receive active code credits allowing you to secure your photos, files, and Gmail backups.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3: Autopay -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>Why should I enable Autopay, and is it secure?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Autopay ensures you never miss a payment deadline. Setting it up gives you an **instant ₹50 discount** on every single monthly invoice, plus a **1,000 Thanks Coin bonus** on activation. It is secured by **Altura Payments Bank Safe Pay** protocols, verifying card/account credentials through encrypted networks and giving you a 4-hour pre-draft notification window so you can pause it at any time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4: Migration Dread -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>I dread the migration process. How complicated is the setup?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We completely eliminate migration friction. When you book a package, we assign a dedicated <strong>Altura Concierge Engineer</strong> to your home. They will visit at your convenient time, install the high-speed fiber router, set up the Xstream Box, configure your Altura Xsafe cameras, set up your Google One storage account, and transition your mobile numbers without a single minute of downtime.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q5: Single Point of Failure -->
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">
+              <span>If I put all my services under one provider, isn't that a risk?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                While all your billing and support are consolidated, the services run on distinct, independent physical infrastructures:
+                <br>• Your **Mobile SIMs** run on our national cellular towers.
+                <br>• Your **Broadband** runs on high-grade optical fiber directly in your home.
+                <br>• Your **Altura Xstream TV** runs on hybrid satellite & fiber internet feeds.
+                <br>This physical separation ensures that if your fiber is cut during road maintenance, your mobile 5G internet and satellite TV remain fully functional, and your smart camera automatically bridges connection using your mobile data pool backup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <p>&copy; 2026 Altura India. All rights reserved. Strategic case study implementation.</p>
+      </div>
+      <div class="footer-links">
+        <a href="javascript:void(0)" onclick="switchTab('services')">Services</a>
+        <a href="javascript:void(0)" onclick="switchTab('packages')">Packages</a>
+        <a href="javascript:void(0)" onclick="switchTab('customizer')">Customizer</a>
+        <a href="javascript:void(0)" onclick="switchTab('faq')">FAQs</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget ("AirBot") -->
+  <div class="chatbot-widget" id="sparky-widget">
+    <!-- Chat Button FAB -->
+    <button class="chatbot-btn" onclick="toggleChatbot()" aria-label="Open AirBot">
+      <i class="fa-solid fa-robot"></i>
+      <span class="chatbot-badge">1</span>
+    </button>
+    
+    <!-- Chat Window Box -->
+    <div class="chatbot-window glass-card">
+      <div class="chatbot-header">
+        <div class="chatbot-title">
+          <div class="chatbot-avatar">A</div>
+          <div class="chatbot-info">
+            <h4>AirBot</h4>
+            <p>Altura Digital Concierge</p>
+          </div>
+        </div>
+        <button class="close-chat-btn" onclick="toggleChatbot(false)">&times;</button>
+      </div>
+      
+      <!-- Messages List -->
+      <div class="chatbot-body" id="chat-messages-container">
+        <!-- Injected dynamically -->
+      </div>
+      
+      <!-- Quick Chips Options -->
+      <div class="chatbot-chips" id="chat-chips-container">
+        <!-- Injected dynamically -->
+      </div>
+      
+      <!-- Input Box -->
+      <form class="chatbot-input-area" id="chat-input-form" onsubmit="handleChatSubmit(event)">
+        <input type="text" class="chatbot-input" id="chat-user-input" placeholder="Type a message..." autocomplete="off">
+        <button type="submit" class="chatbot-send" aria-label="Send message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky Bottom Navigation -->
+  <nav class="mobile-nav">
+    <a href="javascript:void(0)" onclick="switchTab('overview')" id="mobile-nav-item-overview" class="active">
+      <i class="fa-solid fa-house"></i>
+      <span>Overview</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchTab('services')" id="mobile-nav-item-services">
+      <i class="fa-solid fa-list"></i>
+      <span>Services</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchTab('packages')" id="mobile-nav-item-packages">
+      <i class="fa-solid fa-tags"></i>
+      <span>Plans</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchTab('customizer')" id="mobile-nav-item-customizer">
+      <i class="fa-solid fa-sliders"></i>
+      <span>Build</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchTab('faq')" id="mobile-nav-item-faq">
+      <i class="fa-solid fa-circle-question"></i>
+      <span>FAQs</span>
+    </a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
