@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15 });
 
   revealElements.forEach(el => revealObserver.observe(el));
+
+  // Check URL hash for routing on load
+  const hash = window.location.hash.replace('#', '');
+  const validTabs = ['overview', 'services', 'packages', 'customizer', 'faq'];
+  if (hash && validTabs.includes(hash)) {
+    switchTab(hash);
+  }
 });
 
 // Tab Swapping Logic (Controlled solely by main Header Nav Links now!)
@@ -86,6 +93,13 @@ function switchTab(tabId) {
 
   // 4. Scroll page back to top smoothly
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // 5. Update URL hash silently without jump
+  if (history.pushState) {
+    history.pushState(null, null, '#' + tabId);
+  } else {
+    window.location.hash = tabId;
+  }
 }
 
 // 1. Billing Cycle Toggle Logic
