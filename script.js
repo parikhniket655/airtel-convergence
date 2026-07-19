@@ -1,4 +1,4 @@
-// script.js - Airtel Integrated Landing Page Logic
+// script.js - Altura Integrated Landing Page Logic
 
 // State Management
 let billingCycle = 'monthly'; // 'monthly' or 'annual'
@@ -181,7 +181,7 @@ function updateCustomizer() {
   let coins = 0;
 
   if (isBroadband) {
-    listHtml += `<div class="summary-item"><span>Airtel Fiber Broadband</span><span>₹${PRICES.broadband}/mo</span></div>`;
+    listHtml += `<div class="summary-item"><span>Altura Fiber Broadband</span><span>₹${PRICES.broadband}/mo</span></div>`;
     subtotal += PRICES.broadband;
     coins += 100;
   }
@@ -192,7 +192,7 @@ function updateCustomizer() {
     coins += 100 * simCount;
   }
   if (isDth) {
-    listHtml += `<div class="summary-item"><span>Airtel Xstream Box & Play</span><span>₹${PRICES.dth}/mo</span></div>`;
+    listHtml += `<div class="summary-item"><span>Altura Xstream Box & Play</span><span>₹${PRICES.dth}/mo</span></div>`;
     subtotal += PRICES.dth;
     coins += 50;
   }
@@ -203,7 +203,7 @@ function updateCustomizer() {
   }
   if (isSecurity) {
     const cost = PRICES.securityBase * cameraCount;
-    listHtml += `<div class="summary-item"><span>Airtel Xsafe Camera (${cameraCount} units)</span><span>₹${cost}/mo</span></div>`;
+    listHtml += `<div class="summary-item"><span>Altura Xsafe Camera (${cameraCount} units)</span><span>₹${cost}/mo</span></div>`;
     subtotal += cost;
     coins += 100 * cameraCount;
   }
@@ -243,9 +243,9 @@ function updateCustomizer() {
   if (isBroadband && isMobile && simCount >= 3 && isSecurity && cameraCount >= 2) {
     const savings = subtotal - (2999 - (isAutopay ? 50 : 0));
     if (savings > 0) {
-      recBox.innerHTML = `We recommend the <strong>Airtel Infinite</strong> package. You'll save <strong>₹${savings}/mo</strong>, earn 1,000 monthly coins, and get Google One 2TB storage!`;
+      recBox.innerHTML = `We recommend the <strong>Altura Infinite</strong> package. You'll save <strong>₹${savings}/mo</strong>, earn 1,000 monthly coins, and get Google One 2TB storage!`;
     } else {
-      recBox.innerHTML = `We recommend the <strong>Airtel Infinite</strong> package for full smart home coverage.`;
+      recBox.innerHTML = `We recommend the <strong>Altura Infinite</strong> package for full smart home coverage.`;
     }
   } else if (isBroadband && isMobile && simCount <= 2 && (isSecurity || isBank || isDth || isGoogleOne)) {
     const normalPrice = 1499 - (isAutopay ? 50 : 0);
@@ -257,10 +257,10 @@ function updateCustomizer() {
     recBox.innerHTML = text;
   } else if (isBroadband && isMobile && simCount === 1 && isDth && !isSecurity) {
     const savings = subtotal - (999 - (isAutopay ? 50 : 0));
-    recBox.innerHTML = `We recommend the <strong>Airtel Connect</strong> package for ₹999/mo. You save <strong>₹${savings}/mo</strong>!`;
+    recBox.innerHTML = `We recommend the <strong>Altura Connect</strong> package for ₹999/mo. You save <strong>₹${savings}/mo</strong>!`;
   } else if (isMobile && !isBroadband && simCount === 1 && isDth) {
     const savings = (PRICES.mobileBase + PRICES.dth - (isAutopay ? 50 : 0)) - 499;
-    recBox.innerHTML = `We recommend the <strong>Airtel Starter</strong> package for ₹499/mo. Save <strong>₹${savings}/mo</strong>!`;
+    recBox.innerHTML = `We recommend the <strong>Altura Starter</strong> package for ₹499/mo. Save <strong>₹${savings}/mo</strong>!`;
   } else {
     recBox.innerHTML = `Consolidating services into our <strong>Family Secure</strong> tier saves typical homes an average of <strong>₹300/mo</strong> compared to individual billing.`;
   }
@@ -282,7 +282,7 @@ function highlightServiceInCustomizer(service) {
     // Flash toggle row green temporarily
     const row = document.getElementById(`row-${service}`);
     if (row) {
-      row.style.borderColor = 'var(--airtel-red)';
+      row.style.borderColor = 'var(--altura-red)';
       row.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setTimeout(() => {
         row.style.borderColor = '';
@@ -292,11 +292,11 @@ function highlightServiceInCustomizer(service) {
 }
 
 function checkoutCustom() {
-  alert("Thank you for your interest! Your custom bundle configuration has been simulated. An Airtel onboarding consultant will contact you to initiate connection.");
+  alert("Thank you for your interest! Your custom bundle configuration has been simulated. An Altura onboarding consultant will contact you to initiate connection.");
 }
 
 function selectPlan(planName) {
-  alert(`Thank you for selecting the Airtel ${planName} package! We have registered your simulated inquiry. You can now chat with AirBot in the bottom right corner for onboarding support.`);
+  alert(`Thank you for selecting the Altura ${planName} package! We have registered your simulated inquiry. You can now chat with AirBot in the bottom right corner for onboarding support.`);
 }
 
 // 3. FAQ Accordion Logic
@@ -401,7 +401,7 @@ function showChips(options, isMultiSelect = false) {
     // Add primary Confirm button chip
     const confirmChip = document.createElement('div');
     confirmChip.className = 'chip confirm-chip';
-    confirmChip.style.background = 'var(--airtel-red-gradient)';
+    confirmChip.style.background = 'var(--altura-red-gradient)';
     confirmChip.style.color = '#fff';
     confirmChip.style.borderColor = 'transparent';
     confirmChip.style.fontWeight = '700';
@@ -515,29 +515,29 @@ function recommendPackageBasedOnProfile() {
   // Decide package based logically on exact choices to prevent over-bundling standalone users
   if (selected.length === 1 && selected[0] === 'mobile') {
     // ONLY mobile postpaid selected
-    recPlan = "Airtel Starter";
+    recPlan = "Altura Starter";
     cardHtml = `
       <div class="recommended-plan-card">
-        <h5>Airtel Starter</h5>
+        <h5>Altura Starter</h5>
         <p>1 Postpaid SIM + Xstream Play OTT + 100GB Google One storage benefit.</p>
         <span class="price">₹499/month</span>
         <button class="chat-plan-btn" onclick="switchTab('packages'); toggleChatbot(false);">Choose Starter</button>
       </div>
     `;
-    addBotMessage(`Since you **only need mobile connectivity**, our standalone **${recPlan}** plan matches your needs perfectly.<br><br>💡 **Smart Recommendation:** Note that if you require high-speed fiber internet later, buying it separately will cost ₹599/mo (totaling ₹1,098/mo). Consolidating now into our **Airtel Connect** bundle (₹999/mo) would save you money and bring all services under one bill!<br>${cardHtml}`);
+    addBotMessage(`Since you **only need mobile connectivity**, our standalone **${recPlan}** plan matches your needs perfectly.<br><br>💡 **Smart Recommendation:** Note that if you require high-speed fiber internet later, buying it separately will cost ₹599/mo (totaling ₹1,098/mo). Consolidating now into our **Altura Connect** bundle (₹999/mo) would save you money and bring all services under one bill!<br>${cardHtml}`);
   } 
   else if (selected.length === 1 && selected[0] === 'wifi') {
     // ONLY fiber wifi selected
     recPlan = "Fiber Standalone";
-    addBotMessage(`Since you **only need high-speed fiber WiFi**, we recommend our individual **Fiber Standalone** rate at **₹599/mo** (100 Mbps). <br><br>💡 **Savings Tip:** If you also have a mobile line, you can bundle it to get the **Airtel Connect** package for just **₹999/mo** which adds a family postpaid line and smart DTH television, saving you over 25%!`);
+    addBotMessage(`Since you **only need high-speed fiber WiFi**, we recommend our individual **Fiber Standalone** rate at **₹599/mo** (100 Mbps). <br><br>💡 **Savings Tip:** If you also have a mobile line, you can bundle it to get the **Altura Connect** package for just **₹999/mo** which adds a family postpaid line and smart DTH television, saving you over 25%!`);
   }
   else if (hasWifi && hasMobile && selected.length === 2 && !hasTV && !hasSecurity) {
     // Wifi + Mobile only
-    recPlan = "Airtel Connect";
+    recPlan = "Altura Connect";
     cardHtml = `
       <div class="recommended-plan-card">
-        <h5>Airtel Connect</h5>
-        <p>40 Mbps Fiber Broadband + 1 Postpaid SIM + Airtel Xstream Box & Play OTT + 100GB Google One storage.</p>
+        <h5>Altura Connect</h5>
+        <p>40 Mbps Fiber Broadband + 1 Postpaid SIM + Altura Xstream Box & Play OTT + 100GB Google One storage.</p>
         <span class="price">₹999/month</span>
         <button class="chat-plan-btn" onclick="switchTab('packages'); toggleChatbot(false);">Choose Connect</button>
       </div>
@@ -547,23 +547,23 @@ function recommendPackageBasedOnProfile() {
   else if (hasWifi && hasMobile && hasSecurity) {
     // Fiber + Mobile + Smart Camera
     if (userProfile.familySize === "1" || userProfile.familySize === "2") {
-      recPlan = "Airtel Family Secure";
+      recPlan = "Altura Family Secure";
       cardHtml = `
-        <div class="recommended-plan-card" style="border-color:var(--airtel-red); background:rgba(237, 29, 36, 0.08);">
+        <div class="recommended-plan-card" style="border-color:var(--altura-red); background:rgba(237, 29, 36, 0.08);">
           <h5>Family Secure (Special Offer)</h5>
-          <p>100 Mbps Fiber + 2 SIMs + Airtel Xstream Box & Play + 1 Xsafe AI Camera + Google One 200GB storage.</p>
+          <p>100 Mbps Fiber + 2 SIMs + Altura Xstream Box & Play + 1 Xsafe AI Camera + Google One 200GB storage.</p>
           <span class="price"><span style="text-decoration:line-through; font-size:0.8rem; color:var(--text-muted);">₹1,499</span> ₹999/month</span>
-          <p style="color:var(--airtel-red); font-size:0.75rem; font-weight:700;">★ Promo: ₹999/mo for first 3 months! (Save ₹50/mo more with Autopay)</p>
+          <p style="color:var(--altura-red); font-size:0.75rem; font-weight:700;">★ Promo: ₹999/mo for first 3 months! (Save ₹50/mo more with Autopay)</p>
           <button class="chat-plan-btn" onclick="switchTab('packages'); toggleChatbot(false);">Claim Promo Deal</button>
         </div>
       `;
       addBotMessage(`Since you need **WiFi, Mobile SIMs, and smart security**, I recommend our popular **Family Secure** package. <br><br>💡 **Special Offer:** We are running a launch discount on this plan for the first 3 months, bringing the price down to just **₹999/month** (normally ₹1,499/mo). Plus, get full **Google One Cloud Storage** included!<br>${cardHtml}`);
     } else {
-      recPlan = "Airtel Infinite";
+      recPlan = "Altura Infinite";
       cardHtml = `
         <div class="recommended-plan-card">
-          <h5>Airtel Infinite</h5>
-          <p>1 Gbps Fiber + 4 SIMs + Airtel Xstream Box & Play + 3 Xsafe AI Cameras + Google One 2TB storage + Netflix/Prime.</p>
+          <h5>Altura Infinite</h5>
+          <p>1 Gbps Fiber + 4 SIMs + Altura Xstream Box & Play + 3 Xsafe AI Cameras + Google One 2TB storage + Netflix/Prime.</p>
           <span class="price">₹2,999/month</span>
           <button class="chat-plan-btn" onclick="switchTab('packages'); toggleChatbot(false);">Choose Infinite</button>
         </div>
@@ -573,13 +573,13 @@ function recommendPackageBasedOnProfile() {
   }
   else {
     // Default / Catch-All to Family Secure - offering the best balance of products & discount
-    recPlan = "Airtel Family Secure";
+    recPlan = "Altura Family Secure";
     cardHtml = `
-      <div class="recommended-plan-card" style="border-color:var(--airtel-red); background:rgba(237, 29, 36, 0.08);">
+      <div class="recommended-plan-card" style="border-color:var(--altura-red); background:rgba(237, 29, 36, 0.08);">
         <h5>Family Secure (Special Offer)</h5>
-        <p>100 Mbps Fiber + 2 SIMs + Airtel Xstream Box & Play + 1 Xsafe AI Camera + Google One 200GB storage + 500 Thanks Coins/mo.</p>
+        <p>100 Mbps Fiber + 2 SIMs + Altura Xstream Box & Play + 1 Xsafe AI Camera + Google One 200GB storage + 500 Thanks Coins/mo.</p>
         <span class="price"><span style="text-decoration:line-through; font-size:0.8rem; color:var(--text-muted);">₹1,499</span> ₹999/month</span>
-        <p style="color:var(--airtel-red); font-size:0.75rem; font-weight:700;">★ Promo: ₹999/mo for first 3 months! (Save ₹50/mo more with Autopay)</p>
+        <p style="color:var(--altura-red); font-size:0.75rem; font-weight:700;">★ Promo: ₹999/mo for first 3 months! (Save ₹50/mo more with Autopay)</p>
         <button class="chat-plan-btn" onclick="switchTab('packages'); toggleChatbot(false);">Claim Promo Deal</button>
       </div>
     `;
@@ -641,7 +641,7 @@ function processUserText(text) {
 
   // General FAQs
   if (query.includes("discount") || query.includes("offer") || query.includes("three months") || query.includes("3 month") || query.includes("promo") || query.includes("free") || query.includes("faq_discount")) {
-    addBotMessage("We are offering our premium **Family Secure** package (normally ₹1,499/mo) at a special launch price of **₹999/mo for the first 3 months**! <br><br>This includes high-speed fiber internet, 2 family postpaid SIMs, an Airtel Xstream Box, and 1 Airtel Xsafe camera. You save a total of ₹1,500 over the introductory period, with zero activation costs.");
+    addBotMessage("We are offering our premium **Family Secure** package (normally ₹1,499/mo) at a special launch price of **₹999/mo for the first 3 months**! <br><br>This includes high-speed fiber internet, 2 family postpaid SIMs, an Altura Xstream Box, and 1 Altura Xsafe camera. You save a total of ₹1,500 over the introductory period, with zero activation costs.");
     showFaqChips();
   }
   else if (query.includes("google") || query.includes("one") || query.includes("storage") || query.includes("cloud") || query.includes("faq_googleone")) {
@@ -649,19 +649,19 @@ function processUserText(text) {
     showFaqChips();
   }
   else if (query.includes("coin") || query.includes("thanks coin") || query.includes("loyalty") || query.includes("point") || query.includes("reward") || query.includes("faq_coins")) {
-    addBotMessage("**Airtel Thanks Coins** is our loyalty reward program. You earn coins automatically every month based on your bundle plan (up to 1,000 coins/month). You can redeem them directly inside the Airtel Thanks App for shopping coupons, bill cashbacks, or OTT upgrades. Plus, get a **1,000 Thanks Coin bonus** instantly on activating Autopay!");
+    addBotMessage("**Altura Thanks Coins** is our loyalty reward program. You earn coins automatically every month based on your bundle plan (up to 1,000 coins/month). You can redeem them directly inside the Altura Thanks App for shopping coupons, bill cashbacks, or OTT upgrades. Plus, get a **1,000 Thanks Coin bonus** instantly on activating Autopay!");
     showFaqChips();
   }
   else if (query.includes("autopay") || query.includes("automatic") || query.includes("card") || query.includes("save 50") || query.includes("faq_autopay")) {
-    addBotMessage("Enabling **Autopay** automates your monthly bill payment securely using your credit card, debit card, or Airtel Payments Bank account. Autopay accounts receive an **instant ₹50/mo bill discount** on their unified statement and a one-time **1,000 Thanks Coin bonus**!");
+    addBotMessage("Enabling **Autopay** automates your monthly bill payment securely using your credit card, debit card, or Altura Payments Bank account. Autopay accounts receive an **instant ₹50/mo bill discount** on their unified statement and a one-time **1,000 Thanks Coin bonus**!");
     showFaqChips();
   }
   else if (query.includes("xsafe") || query.includes("camera") || query.includes("security") || query.includes("surveillance")) {
-    addBotMessage("Our **Airtel Xsafe Camera** service features full HD 1080p stream capture, real-time humanoid detection alerts on your phone, night vision, and secure cloud storage backup. It is fully managed by Airtel, and any faulty cameras are replaced free of charge.");
+    addBotMessage("Our **Altura Xsafe Camera** service features full HD 1080p stream capture, real-time humanoid detection alerts on your phone, night vision, and secure cloud storage backup. It is fully managed by Altura, and any faulty cameras are replaced free of charge.");
     showFaqChips();
   }
   else if (query.includes("bank") || query.includes("interest") || query.includes("payment") || query.includes("finance")) {
-    addBotMessage("With **Airtel Payments Bank Prime**, you earn **7% per annum interest** on your savings. You also get **Airtel Safe Pay** (which uses third-party bank verification protocols to completely stop unauthorized withdrawals), and **1% instant cashback** on your electricity, gas, and postpaid utility bills paid via the Airtel Thanks App.");
+    addBotMessage("With **Altura Payments Bank Prime**, you earn **7% per annum interest** on your savings. You also get **Altura Safe Pay** (which uses third-party bank verification protocols to completely stop unauthorized withdrawals), and **1% instant cashback** on your electricity, gas, and postpaid utility bills paid via the Altura Thanks App.");
     showFaqChips();
   }
   else if (query.includes("consolidate") || query.includes("one bill") || query.includes("bill") || query.includes("invoice") || query.includes("single")) {
@@ -669,11 +669,11 @@ function processUserText(text) {
     showFaqChips();
   }
   else if (query.includes("migration") || query.includes("setup") || query.includes("install") || query.includes("switch")) {
-    addBotMessage("Migration is simple! Once you confirm your plan, our **Concierge team** does all the heavy lifting. We lay the fiber, set up the Xstream Box and Airtel Xsafe cameras, and transfer your mobile numbers to the postpaid pool. The entire process takes under 2 hours, and we ensure zero connectivity downtime.");
+    addBotMessage("Migration is simple! Once you confirm your plan, our **Concierge team** does all the heavy lifting. We lay the fiber, set up the Xstream Box and Altura Xsafe cameras, and transfer your mobile numbers to the postpaid pool. The entire process takes under 2 hours, and we ensure zero connectivity downtime.");
     showFaqChips();
   }
   else if (query.includes("failure") || query.includes("risk") || query.includes("down") || query.includes("cut")) {
-    addBotMessage("Consolidating billing does not mean single point failure! Your **Fiber Broadband** (ground line), **Mobile SIMs** (cellular towers), and **Airtel Xstream TV** (hybrid feed) operate on completely independent networks. If physical fiber gets cut, your mobile SIMs and satellite TV continue working without interruptions. In fact, our smart cameras automatically failover to cellular hot-spots in emergency outages!");
+    addBotMessage("Consolidating billing does not mean single point failure! Your **Fiber Broadband** (ground line), **Mobile SIMs** (cellular towers), and **Altura Xstream TV** (hybrid feed) operate on completely independent networks. If physical fiber gets cut, your mobile SIMs and satellite TV continue working without interruptions. In fact, our smart cameras automatically failover to cellular hot-spots in emergency outages!");
     showFaqChips();
   }
   else {

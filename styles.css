@@ -1,12 +1,12 @@
-/* styles.css - Airtel Premium Dark Mode Brand Identity */
+/* styles.css - Altura Premium Dark Mode Brand Identity */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
   /* Brand Color Palette */
-  --airtel-red: hsl(354, 85%, 48%);
-  --airtel-red-hover: hsl(354, 85%, 42%);
-  --airtel-red-gradient: linear-gradient(135deg, hsl(354, 85%, 52%) 0%, hsl(340, 80%, 40%) 100%);
-  --airtel-glow: 0 0 20px hsla(354, 85%, 48%, 0.45);
+  --altura-red: hsl(354, 85%, 48%);
+  --altura-red-hover: hsl(354, 85%, 42%);
+  --altura-red-gradient: linear-gradient(135deg, hsl(354, 85%, 52%) 0%, hsl(340, 80%, 40%) 100%);
+  --altura-glow: 0 0 20px hsla(354, 85%, 48%, 0.45);
   
   /* Luminous Accents & Feedback */
   --accent-cyan: hsl(190, 100%, 48%);
@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--airtel-red);
+  background: var(--altura-red);
 }
 
 /* Layout Utilities */
@@ -147,9 +147,9 @@ header {
 .logo-icon {
   width: 32px;
   height: 32px;
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   border-radius: 50%;
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,7 +181,7 @@ header {
   position: relative;
 }
 .nav-links a:hover {
-  color: var(--airtel-red);
+  color: var(--altura-red);
 }
 .nav-links li.active a {
   color: var(--text-primary);
@@ -193,19 +193,19 @@ header {
   left: 0;
   width: 100%;
   height: 3px;
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   border-radius: 2px;
 }
 
 .nav-btn {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   color: #fff;
   padding: 10px 24px;
   border-radius: var(--border-radius-sm);
   text-decoration: none;
   font-weight: 600;
   font-family: 'Outfit', sans-serif;
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
   transition: var(--transition-smooth);
   border: none;
   cursor: pointer;
@@ -248,7 +248,7 @@ header {
   margin-bottom: 24px;
 }
 .hero-content h1 span {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -287,7 +287,7 @@ header {
 }
 .stat-item h3 {
   font-size: 2.2rem;
-  color: var(--airtel-red);
+  color: var(--altura-red);
   font-family: 'Outfit', sans-serif;
 }
 .stat-item p {
@@ -388,7 +388,7 @@ header {
   transition: var(--transition-smooth);
 }
 .service-card:hover::after {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
 }
 .service-icon {
   width: 48px;
@@ -401,14 +401,14 @@ header {
   font-size: 1.5rem;
   margin-bottom: 24px;
   border: 1px solid var(--border-light);
-  color: var(--airtel-red);
+  color: var(--altura-red);
   transition: var(--transition-smooth);
 }
 .service-card:hover .service-icon {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   color: #fff;
   border-color: transparent;
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
 }
 .service-card h3 {
   margin-bottom: 12px;
@@ -484,10 +484,10 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 input:checked + .slider {
-  background-color: var(--airtel-red);
+  background-color: var(--altura-red);
 }
 input:focus + .slider {
-  box-shadow: 0 0 1px var(--airtel-red);
+  box-shadow: 0 0 1px var(--altura-red);
 }
 input:checked + .slider:before {
   transform: translateX(26px);
@@ -520,8 +520,8 @@ input:checked + .slider:before {
 
 /* Highlights for the 2nd most expensive package */
 .price-card.featured {
-  border: 1.5px solid var(--airtel-red);
-  box-shadow: var(--airtel-glow);
+  border: 1.5px solid var(--altura-red);
+  box-shadow: var(--altura-glow);
   transform: scale(1.02);
   background: linear-gradient(180deg, rgba(22, 28, 45, 0.6) 0%, rgba(10, 12, 20, 0.7) 100%);
 }
@@ -532,7 +532,7 @@ input:checked + .slider:before {
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -540,7 +540,7 @@ input:checked + .slider:before {
   border-radius: 12px;
   white-space: nowrap;
   letter-spacing: 0.05em;
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
 }
 
 .price-header h3 {
@@ -596,7 +596,7 @@ input:checked + .slider:before {
   border-bottom: none;
 }
 .price-features li i {
-  color: var(--airtel-red);
+  color: var(--altura-red);
 }
 .price-features li.extra-feature i {
   color: var(--accent-cyan);
@@ -622,10 +622,10 @@ input:checked + .slider:before {
   transition: var(--transition-smooth);
 }
 .price-card.featured .price-btn {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   border-color: transparent;
   color: #fff;
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
 }
 .price-btn:hover {
   transform: translateY(-2px);
@@ -634,7 +634,7 @@ input:checked + .slider:before {
 }
 .price-card.featured .price-btn:hover {
   box-shadow: 0 0 25px hsla(354, 85%, 48%, 0.6);
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
 }
 
 /* Customizer Section */
@@ -676,7 +676,7 @@ input:checked + .slider:before {
 }
 .toggle-row-icon {
   font-size: 1.5rem;
-  color: var(--airtel-red);
+  color: var(--altura-red);
   width: 32px;
   text-align: center;
 }
@@ -719,7 +719,7 @@ input:checked + .slider:before {
   background-color: hsl(222, 18%, 20%);
 }
 .checkbox-container input:checked ~ .checkmark {
-  background-color: var(--airtel-red);
+  background-color: var(--altura-red);
   border-color: transparent;
   box-shadow: 0 0 10px hsla(354, 85%, 48%, 0.3);
 }
@@ -785,7 +785,7 @@ input:checked + .slider:before {
   font-weight: 500;
 }
 .customizer-btn {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   color: #fff;
   border: none;
   padding: 14px;
@@ -794,7 +794,7 @@ input:checked + .slider:before {
   font-weight: 600;
   font-family: 'Outfit', sans-serif;
   cursor: pointer;
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
   transition: var(--transition-smooth);
 }
 .customizer-btn:hover {
@@ -846,7 +846,7 @@ input:checked + .slider:before {
 }
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
-  color: var(--airtel-red);
+  color: var(--altura-red);
 }
 
 /* Footer */
@@ -886,7 +886,7 @@ footer {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   border: none;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(228, 0, 0, 0.35);
@@ -947,7 +947,7 @@ footer {
 }
 
 .chatbot-header {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   padding: 16px 20px;
   display: flex;
   align-items: center;
@@ -1022,7 +1022,7 @@ footer {
 }
 
 .chat-bubble.user {
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   color: #fff;
   border-top-right-radius: 4px;
   align-self: flex-end;
@@ -1030,7 +1030,7 @@ footer {
 }
 
 .chat-bubble.bot strong {
-  color: var(--airtel-red);
+  color: var(--altura-red);
 }
 
 .chat-bubble.bot .recommended-plan-card {
@@ -1058,7 +1058,7 @@ footer {
   color: var(--accent-cyan);
 }
 .chat-plan-btn {
-  background: var(--airtel-red);
+  background: var(--altura-red);
   color: #fff;
   border: none;
   padding: 6px 12px;
@@ -1071,7 +1071,7 @@ footer {
   text-decoration: none;
 }
 .chat-plan-btn:hover {
-  background: var(--airtel-red-hover);
+  background: var(--altura-red-hover);
 }
 
 .chatbot-chips {
@@ -1095,12 +1095,12 @@ footer {
   align-items: center;
 }
 .chip:hover {
-  border-color: var(--airtel-red);
+  border-color: var(--altura-red);
   color: var(--text-primary);
   background: rgba(228, 0, 0, 0.05);
 }
 .chip.selected {
-  border-color: var(--airtel-red);
+  border-color: var(--altura-red);
   background: rgba(237, 29, 36, 0.18);
   color: var(--text-primary);
   box-shadow: 0 0 10px rgba(237, 29, 36, 0.25);
@@ -1126,14 +1126,14 @@ footer {
   transition: var(--transition-smooth);
 }
 .chatbot-input:focus {
-  border-color: var(--airtel-red);
+  border-color: var(--altura-red);
   box-shadow: 0 0 8px rgba(228, 0, 0, 0.2);
 }
 .chatbot-send {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: var(--airtel-red-gradient);
+  background: var(--altura-red-gradient);
   border: none;
   color: #fff;
   cursor: pointer;
@@ -1144,7 +1144,7 @@ footer {
 }
 .chatbot-send:hover {
   transform: scale(1.05);
-  box-shadow: var(--airtel-glow);
+  box-shadow: var(--altura-glow);
 }
 
 /* Scroll Animation classes */
@@ -1289,7 +1289,7 @@ footer {
     font-size: 1.15rem;
   }
   .mobile-nav a.active {
-    color: var(--airtel-red);
+    color: var(--altura-red);
   }
   
   /* Full screen chatbot window overlay on mobile devices */
