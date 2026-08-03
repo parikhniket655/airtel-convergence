@@ -179,6 +179,7 @@ function updateCustomizer() {
   const isSecurity = document.getElementById('opt-security').checked;
   const isBank = document.getElementById('opt-bank').checked;
   const isAutopay = document.getElementById('opt-autopay').checked;
+  const isSwitcher = document.getElementById('opt-switcher').checked;
 
   // Toggle rows highlights classes
   document.getElementById('row-broadband').className = isBroadband ? 'service-toggle-row selected' : 'service-toggle-row';
@@ -188,6 +189,7 @@ function updateCustomizer() {
   document.getElementById('row-security').className = isSecurity ? 'service-toggle-row selected' : 'service-toggle-row';
   document.getElementById('row-bank').className = isBank ? 'service-toggle-row selected' : 'service-toggle-row';
   document.getElementById('row-autopay').className = isAutopay ? 'service-toggle-row selected' : 'service-toggle-row';
+  document.getElementById('row-switcher').className = isSwitcher ? 'service-toggle-row selected' : 'service-toggle-row';
 
   // Calculate costs & coins
   let listHtml = '';
@@ -230,6 +232,10 @@ function updateCustomizer() {
     listHtml += `<div class="summary-item" style="color:var(--success-green); font-weight:600;"><span>Autopay Reward Applied</span><span>-₹50/mo</span></div>`;
     subtotal -= 50;
     coins += 1000; // Autopay bonus coins
+  }
+  if (isSwitcher) {
+    listHtml += `<div class="summary-item" style="color:var(--accent-cyan); font-weight:600;"><span>Jio/Vi Switcher Rebate</span><span>-₹500 (One-time)</span></div>`;
+    coins += 500; // Switcher bonus coins
   }
 
   // Cap subtotal to 0
@@ -306,7 +312,12 @@ function highlightServiceInCustomizer(service) {
 }
 
 function checkoutCustom() {
-  alert("Thank you for your interest! Your custom bundle configuration has been simulated. An Altura onboarding consultant will contact you to initiate connection.");
+  const isSwitcher = document.getElementById('opt-switcher').checked;
+  if (isSwitcher) {
+    alert("Thank you for your interest! Your custom switcher configuration has been simulated.\n\n🎁 Jio/Vi Switcher Rebate (₹500 first-bill credit) has been applied!\n🚚 A local concierge runner will be dispatched for doorstep SIM delivery in 15 minutes to initiate your MNP port-in. An Altura consultant will contact you shortly.");
+  } else {
+    alert("Thank you for your interest! Your custom bundle configuration has been simulated. An Altura onboarding consultant will contact you to initiate connection.");
+  }
 }
 
 function selectPlan(planName) {
@@ -616,6 +627,7 @@ function recommendPackageBasedOnProfile() {
 function showFaqChips() {
   addBotMessage("Ask me anything about these topics, or type your own question:");
   showChips([
+    { text: "Switch from Jio/Vi (Port SIM)", value: "faq_switch" },
     { text: "Tell me about the 3-Month Offer", value: "faq_discount" },
     { text: "What is Google One storage?", value: "faq_googleone" },
     { text: "Explain Thanks Coins loyalty", value: "faq_coins" },
@@ -654,7 +666,11 @@ function processUserText(text) {
   }
 
   // General FAQs
-  if (query.includes("discount") || query.includes("offer") || query.includes("three months") || query.includes("3 month") || query.includes("promo") || query.includes("free") || query.includes("faq_discount")) {
+  if (query.includes("jio") || query.includes("vi") || query.includes("vodafone") || query.includes("idea") || query.includes("port") || query.includes("mnp") || query.includes("switch") || query.includes("faq_switch")) {
+    addBotMessage("Switching from Jio or Vi is completely hassle-free! ⚡<br><br>🎁 **Switcher's Benefit:** Port your mobile lines to Altura and receive **₹500 one-time cashback** on your first bill.<br><br>🚚 **Doorstep MNP in 15 Minutes:** We will dispatch a local concierge runner to deliver and activate your new SIM card at your doorstep in under 15 minutes, with zero downtime on your current number!");
+    showFaqChips();
+  }
+  else if (query.includes("discount") || query.includes("offer") || query.includes("three months") || query.includes("3 month") || query.includes("promo") || query.includes("free") || query.includes("faq_discount")) {
     addBotMessage("We are offering our premium **Family Secure** package (normally ₹1,499/mo) at a special launch price of **₹999/mo for the first 3 months**! <br><br>This includes high-speed fiber internet, 2 family postpaid SIMs, an Altura Xstream Box, and 1 Altura Xsafe camera. You save a total of ₹1,500 over the introductory period, with zero activation costs.");
     showFaqChips();
   }

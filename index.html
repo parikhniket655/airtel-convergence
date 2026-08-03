@@ -10,6 +10,14 @@
 </head>
 <body>
 
+  <!-- Top Poaching/Switcher Promotional Banner -->
+  <div class="switcher-top-banner">
+    <div class="container banner-flex">
+      <span><i class="fa-solid fa-gift animated-gift" style="color: var(--accent-gold); margin-right: 8px;"></i> <strong>Switch from Jio or Vi:</strong> Port your lines to Altura and get an instant <strong>₹500 first-bill cashback</strong> + free <strong>15-minute doorstep SIM delivery</strong>!</span>
+      <button class="banner-close-btn" onclick="this.parentElement.parentElement.style.display='none'">&times;</button>
+    </div>
+  </div>
+
   <!-- Header Navigation (Primary Tab Bar) -->
   <header>
     <div class="container navbar">
@@ -302,7 +310,7 @@
                 <div class="toggle-row-icon"><i class="fa-solid fa-shield-halved"></i></div>
                 <div>
                   <h4>Altura Xsafe AI Camera</h4>
-                  <p>Smart camera security with human motion alert & Cloud backup (Individual: ₹150/mo per camera)</p>
+                  <p>Smart camera security with human motion alert, Cloud backup & <strong>Automatic Cellular Failover Backup</strong> (Individual: ₹150/mo per camera)</p>
                   <div style="margin-top: 8px; display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 0.85rem; color: var(--text-secondary);">Cameras:</span>
                     <button onclick="adjustCameraCount(-1)" style="width:24px; height:24px; border-radius:50%; background:var(--bg-surface-elevated); border:1px solid var(--border-color); color:#fff; cursor:pointer;">-</button>
@@ -344,6 +352,21 @@
               <label class="checkbox-container">
                 <input type="checkbox" id="opt-autopay" onchange="updateCustomizer()" checked>
                 <span class="checkmark" style="border-color: var(--accent-gold);"></span>
+              </label>
+            </div>
+
+            <!-- Switcher Rebate (Jio/Vi MNP port-in) -->
+            <div class="service-toggle-row" id="row-switcher" style="border: 1.5px dashed var(--accent-cyan);">
+              <div class="service-toggle-info">
+                <div class="toggle-row-icon"><i class="fa-solid fa-right-from-bracket" style="color:var(--accent-cyan);"></i></div>
+                <div>
+                  <h4>Port from Jio / Vi (Switcher Benefit)</h4>
+                  <p>Get **₹500 first-bill cashback** & free **15-minute doorstep SIM delivery**!</p>
+                </div>
+              </div>
+              <label class="checkbox-container">
+                <input type="checkbox" id="opt-switcher" onchange="updateCustomizer()">
+                <span class="checkmark" style="border-color: var(--accent-cyan);"></span>
               </label>
             </div>
 
@@ -415,7 +438,7 @@
           <div class="service-card premium-card" onclick="highlightServiceInCustomizer('security')">
             <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <h3>Altura Xsafe</h3>
-            <p>AI smart indoor/outdoor cameras with human detection, HD live-feed app access, and cloud recording backup.</p>
+            <p>AI smart indoor/outdoor cameras with human detection, HD live-feed app access, and <strong>automatic cellular network failover backup</strong>.</p>
             <span class="service-badge">Home Security</span>
           </div>
           <!-- Payments Bank -->

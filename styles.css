@@ -1314,3 +1314,44 @@ footer {
     padding-bottom: 24px;
   }
 }
+
+/* Competitor Switcher UI Banner Styles */
+.switcher-top-banner {
+  background: linear-gradient(90deg, hsl(222, 24%, 6%) 0%, hsl(222, 20%, 12%) 50%, hsl(190, 80%, 15%) 100%);
+  border-bottom: 1px solid var(--accent-cyan);
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 100;
+}
+
+.banner-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: var(--transition-smooth);
+}
+
+.banner-close-btn:hover {
+  color: var(--altura-red);
+}
+
+.animated-gift {
+  animation: pulse-gift 1.5s infinite alternate;
+}
+
+@keyframes pulse-gift {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); filter: drop-shadow(0 0 5px var(--accent-gold)); }
+}
